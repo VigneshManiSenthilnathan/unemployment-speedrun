@@ -1,3 +1,6 @@
+credentials.json
+.env.example
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -205,3 +208,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Job agent — secrets & personal data
+credentials.json
+assets/
+
+# Job agent — generated output
+*.sqlite
+*.db
+cover_letters/
+screenshots/

@@ -1,0 +1,121 @@
+{
+  "personal": {
+    "full_name": "Vignesh Mani Senthilnathan",
+    "first_name": "Vignesh",
+    "last_name": "Mani Senthilnathan",
+    "email": "vigneshmanicareers@gmail.com",
+    "country_code": "+65",
+    "phone": "87417990",
+    "address": "55 Choa Chu Kang Loop, The Warren",
+    "city": "Singapore",
+    "country": "Singapore",
+    "linkedin_url": "https://www.linkedin.com/in/vignesh-mani-senthilnathan/",
+    "github_url": "",
+    "portfolio_url": "",
+    "nationality": "Singaporean",
+    "work_authorization": ""
+  },
+  "education": [
+    {
+      "university": "Nanyang Technological University Singapore",
+      "degree": "Bachelor of Engineering (Honours) in Computer Science",
+      "major": "Computer Science",
+      "secondary_major": "Business",
+      "gpa": "4.34/5.0",
+      "graduation_date": "06/2026",
+      "relevant_courses": []
+    }
+  ],
+  "experience": [
+    {
+      "company": "Monetary Authority of Singapore (MAS)",
+      "role": "AI and Data Engineering Intern",
+      "start_date": "2026-01",
+      "end_date": "Present",
+      "location": "Singapore",
+      "description": "Implemented a multi-stage RAG pipeline using BM25 and vector search for financial document retrieval and deployed a full-stack research interface on AWS to enable AI-driven interaction with proprietary knowledge."
+    },
+    {
+      "company": "Government Investment Corporation (GIC)",
+      "role": "Quantitative Strategy Intern",
+      "start_date": "2025-01",
+      "end_date": "2025-12",
+      "location": "Singapore",
+      "description": "Analyzed sector rotation using financial metrics, optimized a credit default warning model improving predictive accuracy by 11%, integrated quantitative signals with analyst ratings, implemented portfolio optimization models using CVXPY, and performed portfolio attribution analysis."
+    },
+    {
+      "company": "Singlife",
+      "role": "Data Science Intern",
+      "start_date": "2024-05",
+      "end_date": "2024-08",
+      "location": "Singapore",
+      "description": "Developed predictive models and PCA-based fund selection improving Sharpe ratio outcomes by 17%, automated insight generation scripts reducing analysis time by 26%, built K-Means segmentation models improving conversion rates by 20%, and automated workflows using AWS SageMaker, S3, and MWAA."
+    },
+    {
+      "company": "WorldQuant",
+      "role": "BRAIN Research Consultant",
+      "start_date": "2023-07",
+      "end_date": "2024-06",
+      "location": "Remote",
+      "description": "Developed quantitative alphas on the WorldQuant BRAIN platform by analyzing financial research and translating insights into code, and built an engine to generate and backtest alpha signals using the BRAIN API."
+    },
+    {
+      "company": "Nanyang Capital",
+      "role": "Analyst Trainee",
+      "start_date": "2022-08",
+      "end_date": "2023-06",
+      "location": "Singapore",
+      "description": "Trained in equity research and macro analysis, produced investment pitch decks for listed companies, developed DCF valuation models, and prepared weekly macroeconomic updates covering major market developments."
+    }
+  ],
+  "skills": [
+    "Python",
+    "C/C++",
+    "Java",
+    "MATLAB",
+    "HTML",
+    "CSS",
+    "JSON",
+    "SQL",
+    "KDB+/q",
+    "React.js",
+    "Django",
+    "PostgreSQL",
+    "REST APIs",
+    "AWS",
+    "AWS SageMaker",
+    "AWS S3",
+    "AWS MWAA",
+    "Pandas",
+    "NumPy",
+    "Matplotlib",
+    "Seaborn",
+    "Machine Learning",
+    "Quantitative Finance",
+    "Portfolio Optimization",
+    "CVXPY",
+    "Equity Analysis",
+    "DCF Modeling",
+    "UI/UX Design",
+    "Figma",
+    "Canva",
+    "Microsoft Excel",
+    "Microsoft Word",
+    "Microsoft PowerPoint"
+  ],
+  "files": {
+    "resume_pdf": "assets/resume.pdf",
+    "transcript_pdf": "assets/transcript.pdf",
+    "resume_json": "assets/resume.json"
+  },
+  "preferences": {
+    "target_roles": ["Quantitative Trader", "Quantitative Researcher", "Quantitative Developer", "Data Scientist", "Machine Learning Engineer", "AI Researcher", "AI Engineer", "Quantitative Analyst", "Quantitative Strategist", "Investment Analyst", "Financial Engineer"],
+    "target_industries": ["Finance", "Hedge Funds", "Asset Management", "Quantitative Trading", "Financial Technology", "Artificial Intelligence", "Machine Learning"],
+    "excluded_companies": [],
+    "locations": ["Singapore", "Remote"],
+    "remote_preference": "hybrid",
+    "min_salary": null,
+    "fit_score_threshold": 6,
+    "high_priority_companies": []
+  }
+}
