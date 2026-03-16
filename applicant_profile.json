@@ -109,8 +109,17 @@
     "resume_json": "assets/resume.json"
   },
   "preferences": {
-    "target_roles": ["Quantitative Trader", "Quantitative Researcher", "Quantitative Developer", "Data Scientist", "Machine Learning Engineer", "AI Researcher", "AI Engineer", "Quantitative Analyst", "Quantitative Strategist", "Investment Analyst", "Financial Engineer"],
-    "target_industries": ["Finance", "Hedge Funds", "Asset Management", "Quantitative Trading", "Financial Technology", "Artificial Intelligence", "Machine Learning"],
+    "target_roles": [
+      "Quantitative Trader", "Quantitative Researcher", "Quantitative Developer", 
+      "Data Scientist", "Machine Learning Engineer", "AI Researcher", "AI Engineer", 
+      "Quantitative Analyst", "Quantitative Strategist", "Investment Analyst", 
+      "Financial Engineer", "Research Analyst", "Risk Analyst", "Algorithmic Trader", 
+      "Portfolio Manager"
+    ],
+    "target_industries": [
+      "Finance", "Hedge Funds", "Asset Management", "Quantitative Trading", 
+      "Financial Technology", "Artificial Intelligence", "Machine Learning"
+    ],
     "excluded_companies": [],
     "locations": ["Singapore", "Remote"],
     "remote_preference": "hybrid",

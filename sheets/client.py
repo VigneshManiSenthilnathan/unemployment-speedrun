@@ -61,17 +61,21 @@ class SheetsClient:
     # Public API
     # ------------------------------------------------------------------
 
-    def get_pending_rows(self) -> list[dict]:
-        """Return all rows where status == 'Pending'."""
+    def get_rows_by_status(self, status: str) -> list[dict]:
+        """Return all rows where the status column matches the given value."""
         all_rows = self._sheet.get_all_values()
         headers = all_rows[0]
         status_col = headers.index("status")
-        pending = []
-        for i, row in enumerate(all_rows[1:], start=2):  # row 1 is header
-            status = row[status_col] if status_col < len(row) else ""
-            if status.strip() == "Pending":
-                pending.append(self._row_to_dict(row, i))
-        return pending
+        result = []
+        for i, row in enumerate(all_rows[1:], start=2):
+            row_status = row[status_col] if status_col < len(row) else ""
+            if row_status.strip() == status:
+                result.append(self._row_to_dict(row, i))
+        return result
+
+    def get_pending_rows(self) -> list[dict]:
+        """Return all rows where status == 'Pending'."""
+        return self.get_rows_by_status("Pending")
 
     def update_cell(self, row: int, column_name: str, value: str) -> None:
         """Update a single cell by row number and column name."""

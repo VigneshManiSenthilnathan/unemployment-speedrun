@@ -23,6 +23,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
 
 from modules.job_intelligence import process as intelligence_process
+from modules.application_executor import execute as application_execute
 from sheets.client import SheetsClient
 
 load_dotenv()
@@ -63,14 +64,32 @@ async def poll(sheets: SheetsClient) -> None:
 
     if not pending:
         log.info("No pending rows found.")
+    else:
+        log.info("Found %d pending row(s).", len(pending))
+        for row in pending:
+            try:
+                await process_row(row, sheets)
+            except Exception as exc:
+                log.error("Error processing row %d: %s", row["_row"], exc)
+                sheets.set_status(row["_row"], "Failed")
+
+    # ---- Phase 3: execute Ready rows ----
+    try:
+        ready_rows = sheets.get_rows_by_status("Ready")
+    except Exception as exc:
+        log.error("Failed to read Ready rows: %s", exc)
         return
 
-    log.info("Found %d pending row(s).", len(pending))
-    for row in pending:
+    if not ready_rows:
+        log.info("No ready rows to apply.")
+        return
+
+    log.info("Found %d ready row(s) to apply.", len(ready_rows))
+    for row in ready_rows:
         try:
-            await process_row(row, sheets)
+            await application_execute(row, sheets)
         except Exception as exc:
-            log.error("Error processing row %d: %s", row["_row"], exc)
+            log.error("Error executing application for row %d: %s", row["_row"], exc)
             sheets.set_status(row["_row"], "Failed")
 
 

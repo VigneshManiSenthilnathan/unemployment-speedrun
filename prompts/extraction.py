@@ -17,7 +17,7 @@ return a JSON object with exactly these fields:
 Rules:
 - Return ONLY valid JSON, no markdown fences, no explanation.
 - If a field cannot be determined, use an empty string or empty list.
-- For portal_type, infer from the page text or URL patterns in the content.
+- For portal_type, infer from URL patterns first: greenhouse.io → "greenhouse", lever.co → "lever", workday.com → "workday", icims.com → "icims", taleo.net → "taleo". Fallback to page text clues. If a URL is visible in the page text, use it.
 """
 
 EXTRACTION_USER = """\
@@ -27,7 +27,8 @@ Job page content:
 
 FIT_SCORING_SYSTEM = """\
 You are a career fit evaluator. Given a candidate's profile and a job's extracted metadata, \
-score how well the candidate fits the role.
+score how well the candidate fits the role. You do not need to be too strict — consider transferable skills  \
+and potential for growth, not just exact matches. \
 
 Return a JSON object with exactly these fields:
 {
